@@ -6,17 +6,7 @@ spring:
       enabled: false
     discovery:
       enabled: true
-    gateway:
-      mvc:
-        routes:
-          - id: r1
-            uri: lb://CUSTOMER-SERVICE
-            predicates:
-              - Path=/customers/**
-          - id: r2
-            uri: lb://INVENTORY-SERVICE
-            predicates:
-              - Path=/products/**
+
 
 eureka:
   client:
